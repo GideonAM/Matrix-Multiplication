@@ -5,14 +5,10 @@
 
 ## Sample input
 
-int[][] A = {{12, 2, 4},
-             {10, 1, 1}};
+![image](https://github.com/user-attachments/assets/6816bd33-912a-42b3-b463-aed7d7cce518)
 
-int[][] B = {{2, 2},
-             {1, 2},
-             {1, 1}};
-
-multiplyMatrix(A, B);
 
 ## Output after calling multiplyMatrix method
-<img width="213" alt="image" src="https://github.com/user-attachments/assets/a0ff7743-4b27-4494-ad0d-2a3472da1ec1">
+![image](https://github.com/user-attachments/assets/5d397586-5cb3-43bb-bafb-55056f4c647b)
+
+
