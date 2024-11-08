@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -34,6 +35,8 @@ public class Main {
                     matrixTwo[i][j] = userInput.nextInt();
 
 
+            System.out.println("First matrix " +  Arrays.deepToString(matrixOne));
+            System.out.println("Second matrix " + Arrays.deepToString(matrixTwo));
             multiplyMatrix(matrixOne, matrixTwo);
 
         } catch (InputMismatchException exception) {
