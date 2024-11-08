@@ -1,13 +1,44 @@
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        int[][] A = {{12, 2, 4},
-                     {10, 1, 1}};
 
-        int[][] B = {{2, 2},
-                     {1, 2},
-                     {1, 1}};
+        try {
+            System.out.println("Enter number of rows for first matrix");
+            Scanner userInput = new Scanner(System.in);
+            int rowOneInput = userInput.nextInt();
 
-        multiplyMatrix(A, B);
+            System.out.println("Enter number of columns for first matrix");
+            int columnOneInput = userInput.nextInt();
+            int[][] matrixOne = new int[rowOneInput][columnOneInput];
+
+            // for inserting elements into matrix
+            System.out.println("Enter matrix elements one row at a time: ");
+            for (int i = 0; i < matrixOne.length; i++)
+                for (int j = 0; j < matrixOne[0].length; j++)
+                    matrixOne[i][j] = userInput.nextInt();
+
+            System.out.println("Enter number of rows for second matrix");
+            Scanner input = new Scanner(System.in);
+            int rowTwoInput = input.nextInt();
+
+            System.out.println("Enter number of columns for second matrix");
+            int columnTwoInput = input.nextInt();
+            int[][] matrixTwo = new int[rowTwoInput][columnTwoInput];
+
+            // for inserting elements into matrix
+            System.out.println("Enter matrix elements one row at a time: ");
+            for (int i = 0; i < matrixTwo.length; i++)
+                for (int j = 0; j < matrixTwo[0].length; j++)
+                    matrixTwo[i][j] = userInput.nextInt();
+
+
+            multiplyMatrix(matrixOne, matrixTwo);
+
+        } catch (InputMismatchException exception) {
+            System.out.println("Enter valid elements only");
+        }
     }
 
     private static void multiplyMatrix(int[][] firstArray, int[][] secondArray) {
