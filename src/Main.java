@@ -45,9 +45,6 @@ public class Main {
     }
 
     private static void multiplyMatrix(int[][] firstArray, int[][] secondArray) {
-        if (firstArray.length != secondArray[0].length)
-            throw new BadInput("Mismatched dimensions of matrix");
-
         int[][] results = new int[firstArray.length][secondArray[0].length];
 
         for (int row = 0; row < firstArray.length; row++)
@@ -61,12 +58,6 @@ public class Main {
                 System.out.print(element + " ");
 
             System.out.println(" |");
-        }
-    }
-
-    static class BadInput extends RuntimeException {
-        public BadInput(String message) {
-            super(message);
         }
     }
 }
