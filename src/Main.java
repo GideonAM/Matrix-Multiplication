@@ -41,10 +41,15 @@ public class Main {
 
         } catch (InputMismatchException exception) {
             System.out.println("Enter valid elements only");
+        } catch(RuntimeException exception) {
+            System.out.println(exception.getMessage());
         }
     }
 
     private static void multiplyMatrix(int[][] firstArray, int[][] secondArray) {
+        if (firstArray.length != secondArray[0].length)
+            throw new RuntimeException("Mismatched dimensions of matrix");
+
         int[][] results = new int[firstArray.length][secondArray[0].length];
 
         for (int row = 0; row < firstArray.length; row++)
